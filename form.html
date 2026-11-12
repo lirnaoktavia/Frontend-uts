@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Tambah Data — Lahan & Tanaman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+  <main class="container form-page-wrapper">
+    <div class="top-nav-bar">
+      <a href="indexcard.html" class="btn-back">Lihat Daftar Card Lahan & Tanaman →</a>
+      <div class="mode-switcher">
+        <button type="button" class="pill-btn active" data-target="panel-lahan">Form Lahan</button>
+        <button type="button" class="pill-btn" data-target="panel-tanaman">Form Tanaman</button>
+        <button type="button" class="pill-btn" data-target="panel-petani">Form Petani</button>
+      </div>
+    </div>
+
+    <div id="alert-box" class="alert hidden" role="alert"></div>
+
+    <!-- PANEL 1: FORM TAMBAH LAHAN -->
+    <section id="panel-lahan" class="form-panel active">
+      <h1>Form Tambah Data Lahan</h1>
+      <form id="form-lahan" novalidate>
+        <div class="form-group">
+          <label for="lahan-petani">Pemilik Lahan (Petani)</label>
+          <select id="lahan-petani" name="petani_id" required>
+            <option value="">-- Pilih Petani --</option>
+          </select>
+          <span class="error-text" id="err-lahan-petani_id"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="lahan-nama">Nama Lahan</label>
+          <input type="text" id="lahan-nama" name="nama_lahan" placeholder="Contoh: Sawah Blok Utara" required>
+          <span class="error-text" id="err-lahan-nama_lahan"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="lahan-lokasi">Lokasi Lahan</label>
+          <input type="text" id="lahan-lokasi" name="lokasi" placeholder="Contoh: Kalipuro, Banyuwangi" required>
+          <span class="error-text" id="err-lahan-lokasi"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="lahan-luas">Luas Lahan (Hektar)</label>
+          <input type="number" step="0.01" id="lahan-luas" name="luas_hektar" placeholder="Contoh: 1.5" required>
+          <span class="error-text" id="err-lahan-luas_hektar"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Simpan Data Lahan</button>
+      </form>
+    </section>
+
+    <!-- PANEL 2: FORM TAMBAH TANAMAN -->
+    <section id="panel-tanaman" class="form-panel hidden">
+      <h1>Form Tambah Data Tanaman</h1>
+      <form id="form-tanaman" novalidate>
+        <div class="form-group">
+          <label for="tanaman-lahan">Lokasi Lahan Tanam</label>
+          <select id="tanaman-lahan" name="lahan_id" required>
+            <option value="">-- Pilih Lahan --</option>
+          </select>
+          <span class="error-text" id="err-tanaman-lahan_id"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="tanaman-nama">Nama Tanaman</label>
+          <input type="text" id="tanaman-nama" name="nama_tanaman" placeholder="Contoh: Padi Organik" required>
+          <span class="error-text" id="err-tanaman-nama_tanaman"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="tanaman-varietas">Varietas</label>
+          <input type="text" id="tanaman-varietas" name="varietas" placeholder="Contoh: Inpari 32" required>
+          <span class="error-text" id="err-tanaman-varietas"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="tanaman-tanggal">Tanggal Tanam</label>
+          <input type="date" id="tanaman-tanggal" name="tanggal_tanam" required>
+          <span class="error-text" id="err-tanaman-tanggal_tanam"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="tanaman-status">Status Tumbuh</label>
+          <select id="tanaman-status" name="status_tumbuh">
+            <option value="Masa Tanam">Masa Tanam</option>
+            <option value="Pemupukan">Pemupukan</option>
+            <option value="Siap Panen">Siap Panen</option>
+            <option value="Sudah Panen">Sudah Panen</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Simpan Data Tanaman</button>
+      </form>
+    </section>
+
+    <!-- PANEL 3: FORM TAMBAH PETANI -->
+    <section id="panel-petani" class="form-panel hidden">
+      <h1>Form Tambah Data Petani</h1>
+      <form id="form-petani" novalidate>
+        <div class="form-group">
+          <label for="petani-nama">Nama Petani</label>
+          <input type="text" id="petani-nama" name="nama_petani" placeholder="Contoh: Budi Santoso" required>
+          <span class="error-text" id="err-petani-nama_petani"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="petani-hp">Nomor HP</label>
+          <input type="tel" id="petani-hp" name="no_hp" placeholder="Contoh: 081234567890" required>
+          <span class="error-text" id="err-petani-no_hp"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="petani-alamat">Alamat Lengkap</label>
+          <input type="text" id="petani-alamat" name="alamat" placeholder="Contoh: Desa Ketapang, Kalipuro" required>
+          <span class="error-text" id="err-petani-alamat"></span>
+        </div>
+
+        <button type="submit" class="btn-submit">Simpan Data Petani</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

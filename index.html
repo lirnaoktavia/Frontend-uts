@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda — Sistem Manajemen Lahan & Tanaman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-flex">
+      <a href="index.html" class="brand">AgriLahan Banyuwangi</a>
+      <nav aria-label="Menu Utama">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="indexcard.html" class="nav-link">Katalog Card</a>
+        <a href="form.html" class="nav-link btn-nav">+ Tambah Data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero-box">
+      <h1>Sistem Manajemen Data Lahan dan Tanaman</h1>
+      <p>Kelola data petani, pemetaan luas lahan pertanian, dan siklus tumbuh tanaman secara terpadu.</p>
+      <div class="hero-actions">
+        <a href="form.html" class="btn btn-primary">+ Tambah Data Lahan & Tanaman</a>
+        <a href="indexcard.html" class="btn btn-outline">Lihat Semua Card Lahan & Tanaman →</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="ringkasan-heading">
+      <div class="section-header">
+        <h2 id="ringkasan-heading">Ringkasan Data Lahan Terbaru</h2>
+        <a href="indexcard.html" class="link-detail">Lihat Selengkapnya →</a>
+      </div>
+      <div id="dom-lahan-preview" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sistem Manajemen Data Lahan dan Tanaman </p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

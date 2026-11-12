@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Card — Lahan, Tanaman & Petani</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/card.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-flex">
+      <a href="index.html" class="brand">AgriLahan Banyuwangi</a>
+      <nav aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="indexcard.html" class="nav-link active">Katalog Card</a>
+        <a href="form.html" class="nav-link btn-nav">+ Tambah Data</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="alert-box" class="alert hidden" role="alert"></div>
+
+    <div class="catalog-toolbar">
+      <div class="filter-tabs">
+        <button type="button" class="filter-btn active" data-view="lahan">Data Lahan</button>
+        <button type="button" class="filter-btn" data-view="tanaman">Data Tanaman</button>
+        <button type="button" class="filter-btn" data-view="petani">Data Petani</button>
+      </div>
+      <input type="search" id="search-catalog" placeholder="Cari data..." aria-label="Cari data">
+    </div>
+
+    <section id="view-lahan" class="catalog-section active">
+      <div id="card-list-lahan" class="card-grid"></div>
+    </section>
+
+    <section id="view-tanaman" class="catalog-section hidden">
+      <div id="card-list-tanaman" class="card-grid"></div>
+    </section>
+
+    <section id="view-petani" class="catalog-section hidden">
+      <div id="card-list-petani" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sistem Manajemen Data Lahan dan Tanaman </p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
